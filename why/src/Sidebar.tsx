@@ -1,7 +1,9 @@
+import AddNode from "./AddNode";
+
 function SideBar() {
   return (
     <div className="sidebar">
-      <h1>SideBar</h1>
+      <AddNode></AddNode>
     </div>
   );
 }

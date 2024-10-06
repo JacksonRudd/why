@@ -1,19 +1,14 @@
-import './App.css'
-import SideBar from './Sidebar'
-import Graph from './Graph'
-
+import "./App.css";
+import SideBar from "./Sidebar";
+import Graph from "./Graph";
 
 function App() {
-
   return (
-    <div className='app'>
+    <div className="app">
       <SideBar></SideBar>
       <Graph></Graph>
     </div>
-      
-    
-      
-  )
+  );
 }
 
-export default App
+export default App;
