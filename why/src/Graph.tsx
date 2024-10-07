@@ -1,11 +1,10 @@
-import TrendsGraph from "./TrendsGraph";
-
+import Node from "./Node";
 function Graph() {
   return (
     <div className="graph">
       <h1>Graph</h1>
-      <TrendsGraph keyword={"MlOps"}></TrendsGraph>
-      <TrendsGraph keyword={"Kubernetes"}></TrendsGraph>
+      <Node keyword="MlOps"></Node>
+      <Node keyword={"kubernetes"}></Node>
     </div>
   );
 }
