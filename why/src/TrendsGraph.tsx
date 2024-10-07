@@ -18,9 +18,12 @@ const TrendsGraph: React.FC<TrendsGraphProps> = ({
   endDate,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const hasRendered = useRef(false); // Add a flag to prevent multiple renders
 
   useEffect(() => {
     // Clear the container to prevent multiple widgets
+    if (hasRendered.current) return; // Prevent multiple initializations
+
     const container = containerRef.current;
     if (container) {
       container.innerHTML = "";
@@ -65,6 +68,7 @@ const TrendsGraph: React.FC<TrendsGraphProps> = ({
         );
       }
     };
+    hasRendered.current = true; // Set the flag to true after rendering
 
     return () => {
       // Cleanup: Remove the script when the component unmounts
